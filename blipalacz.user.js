@@ -128,8 +128,8 @@ if(typeof GM_log === "undefined") {
 }
 }
 
-ver = '3.3b';
-verb = 3011;
+ver = '3.3c';
+verb = 3012;
 nightly = 0;
 
 if(GM_getValue('lastverremind') == undefined) {
@@ -283,7 +283,7 @@ if(back == 1 && (document.location.href == 'http://help.gadu-gadu.pl/errors/blip
 	blipir = GM_getValue('blipir'); if(blipir == undefined) { blipir = 1; GM_setValue('blipir',1); }
 	linkikokpit = GM_getValue('linkikokpit'); if(linkikokpit == undefined) { linkikokpit = 1; GM_setValue('linkikokpit',1); }
 	usunpolecamy = GM_getValue('usunpolecamy'); if(usunpolecamy == undefined) { usunpolecamy = 0; GM_setValue('usunpolecamy',0); }
-        usunreklame = GM_getValue('usunreklame'); if(usunreklame == undefined) { usunreklame = 0; GM_setValue('usunreklame',0); }
+    usunreklame = GM_getValue('usunreklame'); if(usunreklame == undefined) { usunreklame = 0; GM_setValue('usunreklame',0); }
 	komunikatory = GM_getValue('komunikatory'); if(komunikatory == undefined) { komunikatory = 1; GM_setValue('komunikatory',1); }
 	menedzer = GM_getValue('menedzer'); if(menedzer == undefined) { menedzer = 1; GM_setValue('menedzer',1); }
 	wylwaz = GM_getValue('wylwaz'); if(wylwaz == undefined) { wylwaz = 0; GM_setValue('wylwaz',0); }
@@ -292,15 +292,15 @@ if(back == 1 && (document.location.href == 'http://help.gadu-gadu.pl/errors/blip
 	kontynuuj = GM_getValue('kontynuuj'); if(kontynuuj == undefined) { kontynuuj = 1; GM_setValue('kontynuuj',1); }
 	countero = GM_getValue('countero'); if(countero == undefined) { countero = 1; GM_setValue('countero',1); }
 
-	/* // Prima Aprillis //
+	// Prima Aprillis //
 	if(document.location.href == 'http://blip.pl/dashboard?blipalacz=stopprima') {
 		prima = 0;
-		GM_setValue('prima',0);
+		GM_setValue('prima11',0);
 	} else {
-		prima = GM_getValue('prima'); if(prima == undefined) { prima = 1; GM_setValue('prima',1); }
+		prima = GM_getValue('prima11'); if(prima == undefined) { prima = 1; GM_setValue('prima11',1); }
 	}
 	// EoF Prima Aprillis
-	*/
+	
 
 	hc = GM_getValue('hc'); if(hc == undefined) { hc = 1; GM_setValue('hc',1); }
 
@@ -1323,25 +1323,21 @@ $(document).ready(function() {
 	}
 }
 
-
-
-
-
-	/* // PRIMA APRILLIS //
+	// PRIMA APRILLIS //
 	var data = new Date();
 	var m = data.getMonth();
 	var d = data.getDate();
 	var y = data.getFullYear();
 
-	if (prima == 1 && (d == '1' && m == '3' && y == '2010')) {
+	if (prima == 1 && (d == '1' && m == '3' && y == '2011')) {
 		GM_addStyle(".content { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); } .tracked-user-avatar { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); position:absolute; display:block } .author { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); } #bt { -webkit-transform: rotate(-0deg); -moz-transform: rotate(-0deg); -o-transform: rotate(-0deg); } #ba { -webkit-transform: rotate(-0deg); -moz-transform: rotate(-0deg); -o-transform: rotate(-0deg); }");
 		Message('Blip sie popsul? Wyswietla tresc do gory nogami? Nie... To nie awaria. To BLIPalaczowy zart Prima Aprillisowy :) Fajny nie?<br /> <br /> Przy okazji zycze Wam wesolego jajka :) / <a href="http://blip.pl/users/kubofonista/dashboard">^Kubofonista</a><br /><br /><i>No juz dobrze, wiadomo - kazdy zart sie kiedys znudzi. Kliknij <a href="http://blip.pl/dashboard?blipalacz=stopprima">tutaj</a> aby przywrocic wszystko do normy, zostanie tylko revers avatarow :)</i>');
-	} else if (prima == 0 && (d == '1' && m == '3' && y == '2010')) {
+	} else if (prima == 0 && (d == '1' && m == '3' && y == '2011')) {
 		GM_addStyle(".author { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); }");
 	}
 
 	// EoF PRIMA APRILLIS
-	*/
+	
 
 if(document.location.href.match('http://blip.pl/updates/search?q=')) {
 Paginacja();
