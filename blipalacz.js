@@ -126,7 +126,7 @@ if(typeof GM_log === "undefined") {
 }
 
 ver = '3.5.2';
-verb = 3008;
+verb = 3009;
 
 if(GM_getValue('lastverremind') == undefined) {
 	GM_setValue('lastverremind',verb);
@@ -284,15 +284,15 @@ if(back == 1 && (document.location.href == 'http://help.gadu-gadu.pl/errors/blip
 	kontynuuj = GM_getValue('kontynuuj'); if(kontynuuj == undefined) { kontynuuj = 1; GM_setValue('kontynuuj',1); }
 	countero = GM_getValue('countero'); if(countero == undefined) { countero = 1; GM_setValue('countero',1); }
 	
-	/* // Prima Aprillis //
+	// Prima Aprillis //
 	if(document.location.href == 'http://blip.pl/dashboard?blipalacz=stopprima') {
 		prima = 0;
-		GM_setValue('prima',0);
+		GM_setValue('prima11',0);
 	} else {
-		prima = GM_getValue('prima'); if(prima == undefined) { prima = 1; GM_setValue('prima',1); }
+		prima = GM_getValue('prima11'); if(prima == undefined) { prima = 1; GM_setValue('prima11',1); }
 	}
 	// EoF Prima Aprillis
-	*/
+	
 	
 	hc = GM_getValue('hc'); if(hc == undefined) { hc = 1; GM_setValue('hc',1); }
 	
@@ -1096,21 +1096,21 @@ function BindujZmianeAlert(dodatek,tresc,tresc2) {
 			"div#content ul#dashboard-updates li.update div.container div.toolbar span.transport{width: 140px !important;} ");
 	
 	
-	/* // PRIMA APRILLIS //
+	// PRIMA APRILLIS //
 	var data = new Date();
 	var m = data.getMonth();
 	var d = data.getDate();
 	var y = data.getFullYear();
 	
-	if (prima == 1 && (d == '1' && m == '3' && y == '2010')) {
+	if (prima == 1 && (d == '1' && m == '3' && y == '2011')) {
 		GM_addStyle(".content { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); } .tracked-user-avatar { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); position:absolute; display:block } .author { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); } #bt { -webkit-transform: rotate(-0deg); -moz-transform: rotate(-0deg); -o-transform: rotate(-0deg); } #ba { -webkit-transform: rotate(-0deg); -moz-transform: rotate(-0deg); -o-transform: rotate(-0deg); }");
 		Message('Blip sie popsul? Wyswietla tresc do gory nogami? Nie... To nie awaria. To BLIPalaczowy zart Prima Aprillisowy :) Fajny nie?<br /> <br /> Przy okazji zycze Wam wesolego jajka :) / <a href="http://blip.pl/users/kubofonista/dashboard">^Kubofonista</a><br /><br /><i>No juz dobrze, wiadomo - kazdy zart sie kiedys znudzi. Kliknij <a href="http://blip.pl/dashboard?blipalacz=stopprima">tutaj</a> aby przywrocic wszystko do normy, zostanie tylko revers avatarow :)</i>');
-	} else if (prima == 0 && (d == '1' && m == '3' && y == '2010')) {
+	} else if (prima == 0 && (d == '1' && m == '3' && y == '2011')) {
 		GM_addStyle(".author { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); }");
 	}
 	
 	// EoF PRIMA APRILLIS
-	*/
+	
 	
 if(countero == 1 && (adres.match('http://blip.pl/users/') || adres.match('http://blip.pl/tags/') || adres.match('http://blip.pl/dashboard') )) {
 UruchomLCounter();
