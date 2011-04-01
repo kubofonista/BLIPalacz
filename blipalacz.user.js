@@ -1333,7 +1333,7 @@ $(document).ready(function() {
 		GM_addStyle(".content { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); } .tracked-user-avatar { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); position:absolute; display:block } .author { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); } #bt { -webkit-transform: rotate(-0deg); -moz-transform: rotate(-0deg); -o-transform: rotate(-0deg); } #ba { -webkit-transform: rotate(-0deg); -moz-transform: rotate(-0deg); -o-transform: rotate(-0deg); }");
 		Message('Blip sie popsul? Wyswietla tresc do gory nogami? Nie... To nie awaria. To BLIPalaczowy zart Prima Aprillisowy :) Fajny nie?<br /> <br /> Przy okazji zycze Wam wesolego jajka :) / <a href="http://blip.pl/users/kubofonista/dashboard">^Kubofonista</a><br /><br /><i>No juz dobrze, wiadomo - kazdy zart sie kiedys znudzi. Kliknij <a href="http://blip.pl/dashboard?blipalacz=stopprima">tutaj</a> aby przywrocic wszystko do normy, zostanie tylko revers avatarow :)</i>');
 	} else if (prima == 0 && (d == '1' && m == '3' && y == '2011')) {
-		GM_addStyle(".author { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); }");
+		//GM_addStyle(".author { -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); }");
 	}
 
 	// EoF PRIMA APRILLIS
