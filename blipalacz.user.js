@@ -994,7 +994,7 @@ function Dopal(iled) {
 	title = $(".notice > a")[i].getAttribute("title");
 	hrefn = $(".notice > a")[i].getAttribute("href");
 	href = $(".notice > a")[i].innerHTML;
-	if (href == '[blip]') {
+	if (href.indexOf('[^') == 0) {
 	$(".notice > a")[i].innerHTML = '<br /><div style="background-color:#EEEEEE; border:2px dashed #C0C0C0; font-size:10pt; line-height:10pt; padding:5px; width:475px"><a href="'+hrefn+'" target="_blank">'+title+'</a></div>';
 	}
 
