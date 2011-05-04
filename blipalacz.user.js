@@ -128,8 +128,8 @@ if(typeof GM_log === "undefined") {
 }
 }
 
-ver = '3.3c';
-verb = 3012;
+ver = '3.3d';
+verb = 3013;
 nightly = 0;
 
 if(GM_getValue('lastverremind') == undefined) {
@@ -978,7 +978,7 @@ function Dopal(iled) {
 	}
 	}
 
-	if (href == '[blip]' && cytatykokpit == 1) {
+	if (href.indexOf('[^') == 0 && cytatykokpit == 1) {
 	$(".content > a")[i].innerHTML = '<br /><div style="background-color:#EEEEEE; border:2px dashed #C0C0C0; font-size:10pt; line-height:10pt; padding:5px;"><a href="'+hreff+'" target="_blank">'+title+'</a>'+linkcytuj+'</div>';
 	}
 
