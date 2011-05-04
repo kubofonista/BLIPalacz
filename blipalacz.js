@@ -125,8 +125,8 @@ if(typeof GM_log === "undefined") {
 }
 }
 
-ver = '3.5.2';
-verb = 3009;
+ver = '3.5.4';
+verb = 3010;
 
 if(GM_getValue('lastverremind') == undefined) {
 	GM_setValue('lastverremind',verb);
@@ -827,7 +827,7 @@ iled = 0;
 		}
 	}
 	
-	if (href == '[blip]' && cytatykokpit == 1) {
+	if (href.indexOf('[^') == 0 && cytatykokpit == 1) {
 	jQuery(".content > a")[i].innerHTML = '<br /><div style="background-color:#EEEEEE; border:2px dashed #C0C0C0; font-size:10pt; line-height:10pt; padding:5px;"><a href="'+hreff+'" target="_blank">'+title+'</a>'+linkcytuj+'</div>';
 	}
 
@@ -843,7 +843,7 @@ iled = 0;
 	title = jQuery(".notice > a")[i].getAttribute("title");
 	hrefn = jQuery(".notice > a")[i].getAttribute("href");
 	href = jQuery(".notice > a")[i].innerHTML;
-	if (href == '[blip]') {
+	if (href.indexOf('[^') == 0) {
 	jQuery(".notice > a")[i].innerHTML = '<br /><div style="background-color:#EEEEEE; border:2px dashed #C0C0C0; font-size:10pt; line-height:10pt; padding:5px; width:475px"><a href="'+hrefn+'" target="_blank">'+title+'</a></div>';
 	}
 	
