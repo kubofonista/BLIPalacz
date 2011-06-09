@@ -20,7 +20,7 @@
 // @include        http://help.gadu-gadu.pl/errors/blip/
 // @include        http://czydziala.gadu-gadu.pl/blip/
 // @include        http://blip.pl/updates/search?*
-// @require        https://github.com/kubofonista/BLIPalacz/raw/master/Utils/jQuery.js
+// @require        https://raw.github.com/kubofonista/BLIPalacz/master/Utils/jQuery.js
 // ==/UserScript==
 
 // ZABRANIA SIE DOKONYWANIA JAKICHKOLWIEK MODYFIKACJI KODU BEZ ZGODY AUTORA //
