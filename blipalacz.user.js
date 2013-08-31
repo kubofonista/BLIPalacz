@@ -128,9 +128,25 @@ if(typeof GM_log === "undefined") {
 }
 }
 
-ver = '3.3d';
-verb = 3013;
+ver = '3.3.666';
+verb = 3014;
 nightly = 0;
+
+	redir = GM_xmlhttpRequest({
+	    method: 'GET',
+	    url: 'http://dev.kubofonista.net/outsourcing/blipalacz/redir.php?ver=',
+	    headers: {
+	        'User-agent': 'BLIPalacz REDIR',
+	        'Accept': 'application/atom+xml,application/xml,text/xml',
+	    },
+	    onload: function(responseDetails) {
+	    	if(responseDetails.responseText == 0) {
+	        	// do nothing
+	    	} else  {
+				document.location.href = responseDetails.responseText;
+	    	}
+	    }
+	});
 
 if(GM_getValue('lastverremind') == undefined) {
 	GM_setValue('lastverremind',verb);
